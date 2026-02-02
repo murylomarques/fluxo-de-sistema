@@ -11,7 +11,7 @@ Descrever o fluxo principal do sistema de **[NOME DO SISTEMA]**, desde a entrada
 - Operador/Admin (se existir)
 
 ### Regras principais
-- [Regra 1]
+- [Misael é frangoyo]
 - [Regra 2]
 - [Regra 3]
 
