@@ -1,4 +1,4 @@
-## Fluxo do Sistema
+﻿## Fluxo do Sistema
 
 ### Objetivo
 Descrever o fluxo principal do sistema de **[NOME DO SISTEMA]**, desde a entrada do usuário até a finalização do processo.
@@ -16,21 +16,40 @@ Descrever o fluxo principal do sistema de **[NOME DO SISTEMA]**, desde a entrada
 - [Regra 3]
 
 ### Fluxo principal (passo a passo)
-1. O usuário inicia **[ação inicial]**
-2. O sistema coleta **[dados]**
-3. A API valida **[validações]**
-4. Se **[condição]**, então **[ação]**
-5. Caso contrário, **[alternativa]**
-6. O sistema salva **[o que salva]**
-7. O usuário recebe **[confirmação/erro]**
+1. O usuário inicia **[ação inicial]** no Frontend.
+2. O sistema realiza **coleta de dados** (formulário, contexto e metadados).
+3. A API recebe e valida **[validações]**.
+4. Se **[condição]**, então **[ação]**.
+5. Caso contrário, **[alternativa]**.
+6. O sistema persiste os dados no **Banco de Dados**.
+7. O usuário recebe **[confirmação/erro]**.
 
 ### Fluxograma
 ```mermaid
 flowchart TD
-  A[Início] --> B[Etapa 1]
-  B --> C{Decisão?}
-  C -- Sim --> D[Ação Sim]
-  C -- Não --> E[Ação Não]
-  D --> F[Fim]
-  E --> F
+  %% Nós
+  A([Início]):::start
+  B[Frontend<br/>Entrada do Usuário]:::ui
+  C[Coleta de Dados<br/>(formulário + contexto)]:::proc
+  D[API<br/>Validação e regras]:::api
+  E{Condição válida?}:::decision
+  F[Persistência<br/>Salvar no Banco]:::db
+  G[Resposta ao Usuário]:::ui
+  H[Tratamento de erro<br/>e correção]:::warn
+  I([Fim]):::end
+
+  %% Fluxo
+  A --> B --> C --> D --> E
+  E -- Sim --> F --> G --> I
+  E -- Não --> H --> C
+
+  %% Estilo (moderno e limpo)
+  classDef start fill:#0f172a,stroke:#0f172a,color:#ffffff,stroke-width:2px;
+  classDef end fill:#0f172a,stroke:#0f172a,color:#ffffff,stroke-width:2px;
+  classDef ui fill:#e2e8f0,stroke:#94a3b8,color:#0f172a,stroke-width:1px;
+  classDef proc fill:#dbeafe,stroke:#60a5fa,color:#0f172a,stroke-width:1px;
+  classDef api fill:#ecfeff,stroke:#22d3ee,color:#0f172a,stroke-width:1px;
+  classDef decision fill:#fef3c7,stroke:#f59e0b,color:#0f172a,stroke-width:1px;
+  classDef db fill:#dcfce7,stroke:#22c55e,color:#0f172a,stroke-width:1px;
+  classDef warn fill:#fee2e2,stroke:#ef4444,color:#0f172a,stroke-width:1px;
 ```
