@@ -29,13 +29,13 @@ Descrever o fluxo principal do sistema de **[NOME DO SISTEMA]**, desde a entrada
 flowchart TD
   %% Nós
   A([Início]):::start
-  B[Frontend<br/>Entrada do Usuário]:::ui
-  C[Coleta de Dados<br/>(formulário + contexto)]:::proc
-  D[API<br/>Validação e regras]:::api
+  B["Frontend<br/>Entrada do Usuário"]:::ui
+  C["Coleta de Dados<br/>formulário + contexto"]:::proc
+  D["API<br/>Validação e regras"]:::api
   E{Condição válida?}:::decision
-  F[Persistência<br/>Salvar no Banco]:::db
-  G[Resposta ao Usuário]:::ui
-  H[Tratamento de erro<br/>e correção]:::warn
+  F["Persistência<br/>Salvar no Banco"]:::db
+  G["Resposta ao Usuário"]:::ui
+  H["Tratamento de erro<br/>e correção"]:::warn
   I([Fim]):::end
 
   %% Fluxo
