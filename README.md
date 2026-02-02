@@ -36,7 +36,7 @@ flowchart TD
   F["Persistência<br/>Salvar no Banco"]:::db
   G["Resposta ao Usuário"]:::ui
   H["Tratamento de erro<br/>e correção"]:::warn
-  I([Fim]):::end
+  I([Fim]):::endc
 
   %% Fluxo
   A --> B --> C --> D --> E
@@ -45,7 +45,7 @@ flowchart TD
 
   %% Estilo (moderno e limpo)
   classDef start fill:#0f172a,stroke:#0f172a,color:#ffffff,stroke-width:2px;
-  classDef end fill:#0f172a,stroke:#0f172a,color:#ffffff,stroke-width:2px;
+  classDef endc fill:#0f172a,stroke:#0f172a,color:#ffffff,stroke-width:2px;
   classDef ui fill:#e2e8f0,stroke:#94a3b8,color:#0f172a,stroke-width:1px;
   classDef proc fill:#dbeafe,stroke:#60a5fa,color:#0f172a,stroke-width:1px;
   classDef api fill:#ecfeff,stroke:#22d3ee,color:#0f172a,stroke-width:1px;
