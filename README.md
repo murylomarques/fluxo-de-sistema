@@ -42,7 +42,6 @@ flowchart TD
   A --> B --> C --> D --> E
   E -- Sim --> F --> G --> I
   E -- Não --> H --> C
-  E -- Tal --> H --> C
 
   %% Estilo (moderno e limpo)
   classDef start fill:#0f172a,stroke:#0f172a,color:#ffffff,stroke-width:2px;
