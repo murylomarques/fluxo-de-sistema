@@ -33,7 +33,7 @@ flowchart TD
   C["Coleta de Dados<br/>formulário + contexto"]:::proc
   D["API<br/>Validação e regras"]:::api
   E{Condição válida?}:::decision
-  F["Persistência<br/>Salvar no Banco"]:::db
+  F[("Banco de Dados<br/>Persistência")]:::db
   G["Resposta ao Usuário"]:::ui
   H["Tratamento de erro<br/>e correção"]:::warn
   I([Fim]):::endc
